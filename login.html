@@ -11,18 +11,18 @@
 
 <body>
     <div class="background-wrap">
-        <video class="background-video" src="media/coffee.mp4" loop autoplay preload="true"></video>
+        <video class="background-video" src="media/coffee.mp4" loop autoplay preload="true">Video Not Supported</video>
     </div>
 
     <div class="content">
         <div class="login-modal">
-            <p class="login-title">Login Form</p>
             <center>
-                <form class="" action="index.html" method="post">
+                <p class="login-title">Login Form</p>
+                <form class="" action="login.html" method="post">
                     <table>
                         <tr>
                             <td colspan="2">
-                                <input class="input-box" type="email" name="email" placeholder="enter your email..." required>
+                                <input class="input-box" type="email" name="email" autocomplete="email" placeholder="enter your email..." required>
                             </td>
                         </tr>
                         <tr>
@@ -45,7 +45,9 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <button class="login-button" type="button">Login</button>
+                                <center>
+                                    <input type="submit" onclick="loginBut()" class="login-button" value="Sign up">
+                                </center>
                             </td>
                         </tr>
                     </table>
@@ -56,6 +58,24 @@
             <marquee direction="left"> made by : Naman Sehgal (1610991550), Mukul Bisht (1610991538), Neelesh Vashist (1610991563)</marquee>
         </div>
     </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDkJB6oUP5rsx4GBAcIlroIKvoaexphuxA",
+            authDomain: "web-board-c2a93.firebaseapp.com",
+            databaseURL: "https://web-board-c2a93.firebaseio.com",
+            projectId: "web-board-c2a93",
+            storageBucket: "web-board-c2a93.appspot.com",
+            messagingSenderId: "218819755028"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/login.js">
+
+    </script>
 </body>
 
 </html>
